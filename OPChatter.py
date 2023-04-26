@@ -134,7 +134,7 @@ def climate():
         else :
             print("IDK")
             climate()
-        chatter()
+        climate()
 
 def violenece():
     reasonv = input("User Input : ")
