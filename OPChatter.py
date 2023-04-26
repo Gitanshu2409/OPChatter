@@ -16,14 +16,14 @@ print("")
 
 def realworldproblems():
     print("That's my favourite topic......but there are many subtopics here too")
-    print("Some of them are -> Climate Change, Violence, Education")
+    print("Some of them are -> Climate Change, Education")
     time.sleep(2)
     print("What would you like to discuss about ?")
     time.sleep(1)
     discuss = input("What topic would you like ? : ")
 
     if "climate" in discuss.lower() or "climate change" in discuss.lower() or "pollution" in discuss.lower():
-        print("What do you think reason should be ? : ")
+        print("What do you think reason should be for climate change (or ask me a question)? : ")
         climate()
     elif "violence" in discuss.lower() or "riots" in discuss.lower() or "terrorism" in discuss.lower():
         print("What you think?")
@@ -40,7 +40,7 @@ def introduce():
     if prompt.lower() == "y":
         print("Yo, Myself OPChatter : OP stands for Overpowered\nI was designed in a time crunch of 5 hours\nI am better than my previous Java protoype which took days\nI have many functions\nBut i am mainly meant to create awareness about real world problems..\nCredits : Gitanshu & Simarjeet")
     else:
-        print("kk")
+        print("As you wish")
     chatter()
 
 def calculate():
@@ -60,9 +60,10 @@ def calculate():
     elif mathprompt.lower() == "divide" or mathprompt.lower() == "division":
         print("Result : ", a/b)
     elif mathprompt.lower() == "exponent" or mathprompt.lower() == "exponentation" or mathprompt.lower() == "power":
-        print("Result : ",a^b)
+        print("Result : ",a**b)
     else:
-        print("IDK")
+        print("I can't do that")
+        print("Try something else.....")
     chatter()
 
 def fact():
@@ -93,7 +94,7 @@ def fact():
 def chatter():
     print("Type -> 'What can you do ?' to know my functionalities")
     chatinpt = input("User Input : ")
-    while chatinpt != "quit" or "exit" or "bye":    
+    while chatinpt != "quit" or chatinpt != "exit" or chatinpt != "bye":    
         if "introduce" in chatinpt.lower():
             introduce()
         elif "calculate" in chatinpt.lower():
@@ -109,9 +110,8 @@ def chatter():
             print("Yeet!")
             exit()
         else:
-            print("IDK")
+            print("Sorry..can't do that")
             chatter()
-        
 
 def climate():
     reason = input("User Input : ")
@@ -121,40 +121,50 @@ def climate():
             time.sleep(2)
             print("")
             print("Burning fossil fuels, cutting down forests and farming livestock are increasingly \ninfluencing the climate and the earth's temperature.")
-        elif "nature" in reason.lower():
+        elif "what is global warming?" in reason.lower() or "global warming" in reason.lower():
+            print("In short: The world is getting hotter, and humans are responsible.")
+            time.sleep(1)
+            print("Climate change describes a change in the average conditions — such as temperature and \n\
+rainfall — in a region over a long period of time. NASA scientists have observed Earth’s \n\
+surface is warming, and many of the warmest years on record have happened in the past 20 \n\
+years. ")
+        elif "effect" in reason.lower() and "greenhouse" in reason.lower():
+            print("The greenhouse effect is a process that occurs when gases in Earth's atmosphere trap the \n\
+Sun's heat. This process makes Earth much warmer than it would be without an atmosphere. \n\
+The greenhouse effect is one of the things that makes Earth a comfortable place to live. ")
+        elif "carbon" in reason.lower():
+            print("Carbon is in carbon dioxide, which is a greenhouse gas that traps heat close to \n\
+Earth. It helps Earth hold some of the heat it receives from the Sun so it doesn't \n\
+all escape back into space. But CO2 is only good up to a point – beyond that \n\
+point, Earth's temperature warms up too much. NASA research satellites such as \n\
+OCO-2 and OCO-3 are studying how carbon moves around the planet. ")
+        elif "climate" in reason.lower() or "climate change" in reason.lower():
+            print("Scientists have been observing Earth for a long time. They use NASA satellites \n\
+and other instruments to collect many types of information about Earth's land, \n\
+atmosphere, ocean and ice. This information tells us that Earth's climate is \n\
+getting warmer. ")
+        elif "oceans" in reason.lower():
+            print("The ocean covers about 70% of Earth’s surface. So, it’s not surprising that it \n\
+plays a large part in Earth’s environment. As Earth warms, water in the ocean \n\
+soaks up energy (heat) and distributes it more evenly across the planet. The \n\
+ocean also absorbs carbon dioxide from Earth’s atmosphere. The additional  \n\
+heat and carbon dioxide in the ocean can change the environment for the many  \n\
+plants and animals that live there. ")
+        elif "volcano" in reason.lower() or "natural" in reason.lower() or "fluctuations" in reason.lower() or "nature" in reason.lower():
             print("Yeah it is a minor reason")
             print("Volcanic eruptions, fluctuations in solar radiation, tectonic shifts, and even \nsmall changes in our orbit have all had observable effects on planetary warming and \ncooling patterns")
         elif "no idea" in reason.lower() or "don't know" in reason.lower() or "you may tell" in reason.lower() or "tell me" in reason.lower():
             print("Here are a few reasons --\nHeat-trapping Greenhouse Gases And The Earth's Climate")
-        elif "problem" or "worry" in reason.lower():
+        elif "problem" in reason.lower() or "worry" in reason.lower():
             print("More frequent and intense drought, storms, heat waves, rising sea levels, \nmelting glaciers and warming oceans can directly harm animals, destroy the places \nthey live, and wreak havoc on people's livelihoods and communities. As climate change \nworsens, dangerous weather events are becoming more frequent or severe.")
         elif "quit" in reason.lower() or "exit" in reason.lower() or "end" in reason.lower():
             print("ok")
             chatter()
         else :
-            print("IDK")
+            print("Out of my Scope")
             climate()
         climate()
 
-def violenece():
-    reasonv = input("User Input : ")
-    while reasonv != "quit" or reasonv != "exit" or reasonv != "end":
-        if "fear" in reasonv or "anger" in reasonv :
-            time.sleep(1)
-            print("")
-            print("Violence is understood to be often driven by negative emotions, such as anger or fear.")
-        elif "no idea" in reasonv or "don't know" in reasonv or "you may tell" in reasonv or "tell me" in reasonv:
-            print("Violence is understood to be often driven by negative emotions, such as anger or fear.")
-        elif "solution" in reasonv or "prevent" in reasonv:
-            print(" There are many but the best one may be -> Remember, putting others down doesn't raise you up")
-        elif "quit" in reasonv or "exit" in reasonv or "end" in reasonv:
-            print("As you wish")
-            chatter()
-        else:
-            print("No info about that try something else")
-            print("Try again!")
-            violenece()
-        violenece()
 def study():
     reasonst = input("User Input : ")
     while reasonst.lower() != "quit" or "exit" or "end":
@@ -180,17 +190,33 @@ def study():
             Too much competition \
             Not Focusing on Overall Growth\
             Lack of Training")
+        elif "less" in reasonst.lower() or "lack" in reasonst.lower():
+            if "budget" in reasonst.lower():
+                print("This is so true.......")
+                time.sleep(1)
+                print("Inadequate levels of funding leave too many students unable to reach established performance benchmarks.")
+            elif "teachers" in reasonst.lower():
+                print("Nevertheless....still a reason")
+                time.sleep(1)
+                print("The number of students in search of proper education is way more in comparison to the teachers and faculty available. \nThus, qualified teachers must be appointed to impart knowledge to the future of the country")
+            elif "creative" in reasonst.lower() or "creativity" in reasonst.lower():
+                print("A sad reality....")
+                time.sleep(1)
+                print("The world now needs creative minds and the Government must encourage schools \nto boost the students and utilise their capacities to the max and \nnot let their ideas go unheard")
+            else:
+                print("Might be a reason even i don't know.....:)")
+            study()
         else:
             print("i don't know that")
             print("try something else")
-            study()
         study()
+
 time.sleep(1)
 
 usrname = input("Your Name : ")
 time.sleep(0.75)
 
-print("Welcome to OPChatter : ", usrname)
+print("Welcome to ChatterOP : ", usrname)
 confirm = input("Would you like to begin : ")
 if "no" in confirm.lower() or "nah" in confirm.lower():
     print("Hasta la vista (Goodbye) : Exiting...")
