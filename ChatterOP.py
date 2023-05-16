@@ -25,11 +25,8 @@ def realworldproblems():
     if "climate" in discuss.lower() or "climate change" in discuss.lower() or "pollution" in discuss.lower():
         print("What do you think reason should be for climate change (or ask me a question)? : ")
         climate()
-    elif "violence" in discuss.lower() or "riots" in discuss.lower() or "terrorism" in discuss.lower():
-        print("What you think?")
-        violenece()
     elif "education" in discuss.lower():
-        print("Rather at very large scale or a very short scale education system in cuntries is sstil a problem..")
+        print("Rather at very large scale or a very short scale education system in many countries is still a problem..")
         print("Make a guess why this is so or ask me a few questions......")
         study()
     else:
@@ -40,7 +37,7 @@ def introduce():
     print("Would like me to introduce myself to you ?")
     prompt = input("Y/N : ")
     if prompt.lower() == "y":
-        print("Yo, Myself OPChatter : OP stands for Overpowered\nI was designed in a time crunch of 5 hours\nI am better than my previous Java protoype which took days\nI have many functions\nBut i am mainly meant to create awareness about real world problems..\nCredits : Gitanshu & Simarjeet")
+        print("Yo, Myself OPChatter : OP stands for Overpowered\nI was designed in a time crunch of 5 hours\nI am better than my previous Java protoype which took days\nI have many functions\nBut my main goal is to to create awareness about real world problems..\nCredits : Gitanshu")
     else:
         print("As you wish")
     chatter()
@@ -96,14 +93,14 @@ def fact():
 def chatter():
     print("Type -> 'What can you do ?' to know my functionalities")
     chatinpt = input("User Input : ")
-    while chatinpt != "quit" or chatinpt != "exit" or chatinpt != "bye":    
+    while chatinpt != "quit" or chatinpt != "exit" or chatinpt != "bye":
         if "introduce" in chatinpt.lower():
             introduce()
         elif "calculate" in chatinpt.lower():
             calculate()
         elif "fact" in chatinpt.lower():
             fact()
-        elif "what can you do ?" in chatinpt.lower():
+        elif "what can you do ?" in chatinpt.lower() or "functionalities" in chatinpt.lower():
             print("-> I can do math...\n","-> I can tell random facts\n","-> I am designed to discuss about real world problems")
             chatter()
         elif "realworld" in chatinpt.lower() or "real-world" in chatinpt.lower() or "global issues" in chatinpt.lower():
@@ -164,7 +161,6 @@ plants and animals that live there. ")
             chatter()
         else :
             print("Out of my Scope")
-            climate()
         climate()
 
 def study():
